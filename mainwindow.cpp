@@ -8,9 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 }
 
-class mistake_exception{};
-
 void MainWindow::on_btGO_clicked()
+
 {
         bool ok;
         double array[4][4] = {{1,0.013,0.012,0.015},{75.95,1, 0.88, 1.14},
@@ -22,7 +21,7 @@ void MainWindow::on_btGO_clicked()
             double p, changedSumm;
             p = array[i][j];
             changedSumm = summ*p;
-                ui->lbResult->setText(QString("%1").arg(changedSumm));
+            ui->lbResult->setText(QString("%1").arg(changedSumm));
         } else {
             ui->lbResult->setText("Введите корректные значения!");
         }
